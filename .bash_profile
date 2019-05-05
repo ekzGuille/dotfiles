@@ -1,7 +1,5 @@
-HOST_NAME=minima
+HOST_NAME=Guille
 
-source ~/.nvm/nvm.sh
-nvm use stable
 shopt -s autocd
 shopt -s histappend
 
@@ -22,9 +20,6 @@ bldgrn='\e[1;32m' # Bold Green
 bldpur='\e[1;35m' # Bold Purple
 txtrst='\e[0m'    # Text Reset
 
-emojis=("👾" "🌐" "🎲" "🌍" "🐉" "🌵")
-
-EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
 
 print_before_the_prompt () {
     dir=$PWD
@@ -35,9 +30,6 @@ print_before_the_prompt () {
 
 PROMPT_COMMAND=print_before_the_prompt
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-PS1="$EMOJI >"
-
-fortune | cowsay -f tux
 
 function mkcd()
 {
@@ -47,8 +39,6 @@ function mkcd()
 # -------
 # Aliases
 # -------
-alias 🍺="git checkout -b drunk"
-alias a='code .'
 alias c='code .'
 alias reveal-md="reveal-md --theme night --highlight-theme hybrid --port 1337"
 alias ns='npm start'
