@@ -1,6 +1,8 @@
 # Mi bash_profile
 HOST_NAME=Guille
 
+source ~/.nvm/nvm.sh
+nvm use stable
 shopt -s autocd
 shopt -s histappend
 
@@ -67,3 +69,7 @@ alias gp='git pull'
 alias gpsh='git push'
 alias gss='git status -s'
 alias gs='echo ""; echo "*********************************************"; echo -e "   DO NOT FORGET TO PULL BEFORE COMMITTING"; echo "*********************************************"; echo ""; git status'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
